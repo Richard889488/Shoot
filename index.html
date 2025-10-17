@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>多人臉部射擊</title>
+<link rel="stylesheet" href="./main.css">
+<script src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+<header>
+  <div class="row">
+    <span>🎯 多人臉部射擊</span>
+  </div>
+  <div class="row">
+    <input id="name" placeholder="你的名字">
+    <button id="btnJoin">訓練並加入</button>
+    <button id="btnShoot" disabled>開火</button>
+  </div>
+  <div class="row">
+    <span>玩家列表：</span><span id="players">（未連線）</span>
+  </div>
+</header>
+
+<main>
+  <div class="stage">
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="canvas"></canvas>
+    <div class="crosshair">
+      <div class="h"></div><div class="v"></div><div class="ring"></div>
+    </div>
+  </div>
+  <div id="log"></div>
+</main>
+
+<script src="./app.js"></script>
+</body>
+</html>
